@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "STCSpaceObject.h"
 
-@interface STCDetailViewController : UIViewController
+@interface STCDetailViewController : UIViewController <UIScrollViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) UIImageView *imageView;
+@property (strong, nonatomic) STCSpaceObject *spaceObject;
 
 @end
