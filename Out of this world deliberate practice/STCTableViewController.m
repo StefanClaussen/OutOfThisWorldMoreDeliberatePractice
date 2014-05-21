@@ -28,6 +28,15 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    for (NSDictionary *data in [AstronomicalData allKnownPlanets])
+    {
+        NSString *imageName = [NSString stringWithFormat:@"%@.jpg", data[PLANET_NAME]];
+        STCSpaceObject *spacePlanet = [[STCSpaceObject alloc]initWithData:data andImage:[UIImage imageNamed:imageName]];
+        [self.planets addObject:spacePlanet];
+    }
+    NSLog(@"%@", self.planets);
+    
 }
 
 -(NSMutableArray *)planets
@@ -49,14 +58,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
     return [self.planets count];
 }
@@ -66,8 +73,10 @@
 {
     static NSString *cellIdentifier = @"cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell...
+    STCSpaceObject *planet = self.planets[indexPath.row];
+    cell.textLabel.text = planet.name;
+    cell.detailTextLabel.text = planet.nickname;
+    cell.imageView.image = planet.spaceImage;
     
     return cell;
 }
