@@ -1,10 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Mho-b5-YIL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Rwh-P5-NFH">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--View Controller-->
+        <scene sceneID="Lv8-D9-QWK">
+            <objects>
+                <viewController id="TuG-Uk-lkf" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Pco-hv-pyl"/>
+                        <viewControllerLayoutGuide type="bottom" id="Yaf-hZ-PNZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yrJ-rl-qtI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Khc-tI-pfb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fhr-gf-9ye" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1437" y="88"/>
+        </scene>
+        <!--Table View Controller - Planets-->
         <scene sceneID="Arj-uX-vfF">
             <objects>
                 <tableViewController id="Mho-b5-YIL" customClass="STCTableViewController" sceneMemberID="viewController">
@@ -13,11 +32,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="yuJ-gn-4CQ" detailTextLabel="76Z-5g-Al1" style="IBUITableViewCellStyleSubtitle" id="Rod-yw-KU7">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="yuJ-gn-4CQ" detailTextLabel="76Z-5g-Al1" style="IBUITableViewCellStyleSubtitle" id="Rod-yw-KU7">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rod-yw-KU7" id="uNJ-lO-K0n">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yuJ-gn-4CQ">
@@ -36,6 +55,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="TuG-Uk-lkf" kind="push" id="1Vz-lY-35a"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -43,8 +65,27 @@
                             <outlet property="delegate" destination="Mho-b5-YIL" id="7aj-XR-NOv"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Planets" id="ZFG-s1-KlP"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kit-ay-KRY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="952" y="88"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DXK-aQ-zq0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rwh-P5-NFH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tJw-IE-Bt0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Mho-b5-YIL" kind="relationship" relationship="rootViewController" id="Nxh-Oi-hOA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jBj-W1-SDp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="426" y="88"/>
         </scene>
