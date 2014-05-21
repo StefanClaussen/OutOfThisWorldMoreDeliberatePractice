@@ -33,6 +33,7 @@
 		F846257C192CB2B3001A44B4 /* Saturn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F8462572192CB2B3001A44B4 /* Saturn.jpg */; };
 		F846257D192CB2B3001A44B4 /* Uranus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F8462573192CB2B3001A44B4 /* Uranus.jpg */; };
 		F846257E192CB2B3001A44B4 /* Venus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F8462574192CB2B3001A44B4 /* Venus.jpg */; };
+		F84625CC192CD27E001A44B4 /* STCDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F84625CB192CD27E001A44B4 /* STCDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,8 @@
 		F8462572192CB2B3001A44B4 /* Saturn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Saturn.jpg; sourceTree = "<group>"; };
 		F8462573192CB2B3001A44B4 /* Uranus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Uranus.jpg; sourceTree = "<group>"; };
 		F8462574192CB2B3001A44B4 /* Venus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Venus.jpg; sourceTree = "<group>"; };
+		F84625CA192CD27E001A44B4 /* STCDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STCDetailViewController.h; sourceTree = "<group>"; };
+		F84625CB192CD27E001A44B4 /* STCDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STCDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +146,8 @@
 				F8462539192CA945001A44B4 /* Main.storyboard */,
 				F8462567192CAF9B001A44B4 /* STCTableViewController.h */,
 				F8462568192CAF9B001A44B4 /* STCTableViewController.m */,
+				F84625CA192CD27E001A44B4 /* STCDetailViewController.h */,
+				F84625CB192CD27E001A44B4 /* STCDetailViewController.m */,
 				F8462563192CAA98001A44B4 /* Model */,
 				F846253F192CA945001A44B4 /* Images.xcassets */,
 				F846252E192CA945001A44B4 /* Supporting Files */,
@@ -328,6 +333,7 @@
 				F8462566192CAAAF001A44B4 /* STCSpaceObject.m in Sources */,
 				F8462538192CA945001A44B4 /* STCAppDelegate.m in Sources */,
 				F8462569192CAF9B001A44B4 /* STCTableViewController.m in Sources */,
+				F84625CC192CD27E001A44B4 /* STCDetailViewController.m in Sources */,
 				F8462561192CAA5A001A44B4 /* AstronomicalData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
