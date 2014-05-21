@@ -130,8 +130,14 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if (sender isKindOfClass:<#(__unsafe_unretained Class)#>) {
-        <#statements#>
+    if ([sender isKindOfClass:[UITableViewCell class]])
+    {
+        if ([segue.destinationViewController isKindOfClass:[STCDetailViewController class]]) {
+            STCDetailViewController *nextVC = segue.destinationViewController;
+            NSIndexPath *path = [self.tableView indexPathForCell:sender];
+            STCSpaceObject *selectedObject = self.planets[path.row];
+            nextVC.spaceObject = selectedObject;
+        }
     }
 }
 
