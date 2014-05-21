@@ -75,8 +75,13 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     STCSpaceObject *planet = self.planets[indexPath.row];
     cell.textLabel.text = planet.name;
+    cell.textLabel.textColor = [UIColor whiteColor];
     cell.detailTextLabel.text = planet.nickname;
+    cell.detailTextLabel.textColor = [UIColor colorWithWhite:0.5 alpha:1];
     cell.imageView.image = planet.spaceImage;
+    
+    tableView.backgroundColor = [UIColor blackColor];
+    cell.backgroundColor = [UIColor clearColor];
     
     return cell;
 }
