@@ -21,6 +21,8 @@
 		F8462549192CA946001A44B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F846252B192CA945001A44B4 /* UIKit.framework */; };
 		F8462551192CA946001A44B4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F846254F192CA946001A44B4 /* InfoPlist.strings */; };
 		F8462553192CA946001A44B4 /* Out_of_this_world_deliberate_practiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F8462552192CA946001A44B4 /* Out_of_this_world_deliberate_practiceTests.m */; };
+		F8462561192CAA5A001A44B4 /* AstronomicalData.m in Sources */ = {isa = PBXBuildFile; fileRef = F846255E192CAA5A001A44B4 /* AstronomicalData.m */; };
+		F8462566192CAAAF001A44B4 /* STCSpaceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F8462565192CAAAF001A44B4 /* STCSpaceObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		F846254E192CA946001A44B4 /* Out of this world deliberate practiceTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Out of this world deliberate practiceTests-Info.plist"; sourceTree = "<group>"; };
 		F8462550192CA946001A44B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F8462552192CA946001A44B4 /* Out_of_this_world_deliberate_practiceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Out_of_this_world_deliberate_practiceTests.m; sourceTree = "<group>"; };
+		F846255D192CAA5A001A44B4 /* AstronomicalData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AstronomicalData.h; sourceTree = "<group>"; };
+		F846255E192CAA5A001A44B4 /* AstronomicalData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AstronomicalData.m; sourceTree = "<group>"; };
+		F8462564192CAAAF001A44B4 /* STCSpaceObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STCSpaceObject.h; sourceTree = "<group>"; };
+		F8462565192CAAAF001A44B4 /* STCSpaceObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STCSpaceObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +123,7 @@
 				F8462539192CA945001A44B4 /* Main.storyboard */,
 				F846253C192CA945001A44B4 /* STCViewController.h */,
 				F846253D192CA945001A44B4 /* STCViewController.m */,
+				F8462563192CAA98001A44B4 /* Model */,
 				F846253F192CA945001A44B4 /* Images.xcassets */,
 				F846252E192CA945001A44B4 /* Supporting Files */,
 			);
@@ -130,6 +137,7 @@
 				F8462530192CA945001A44B4 /* InfoPlist.strings */,
 				F8462533192CA945001A44B4 /* main.m */,
 				F8462535192CA945001A44B4 /* Out of this world deliberate practice-Prefix.pch */,
+				F846255C192CAA5A001A44B4 /* astronmical-data-model */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -150,6 +158,24 @@
 				F846254F192CA946001A44B4 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F846255C192CAA5A001A44B4 /* astronmical-data-model */ = {
+			isa = PBXGroup;
+			children = (
+				F846255D192CAA5A001A44B4 /* AstronomicalData.h */,
+				F846255E192CAA5A001A44B4 /* AstronomicalData.m */,
+			);
+			path = "astronmical-data-model";
+			sourceTree = "<group>";
+		};
+		F8462563192CAA98001A44B4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F8462564192CAAAF001A44B4 /* STCSpaceObject.h */,
+				F8462565192CAAAF001A44B4 /* STCSpaceObject.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,8 +277,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8462534192CA945001A44B4 /* main.m in Sources */,
+				F8462566192CAAAF001A44B4 /* STCSpaceObject.m in Sources */,
 				F846253E192CA945001A44B4 /* STCViewController.m in Sources */,
 				F8462538192CA945001A44B4 /* STCAppDelegate.m in Sources */,
+				F8462561192CAA5A001A44B4 /* AstronomicalData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
