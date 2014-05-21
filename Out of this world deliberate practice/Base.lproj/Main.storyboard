@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="Lv8-D9-QWK">
             <objects>
-                <viewController id="TuG-Uk-lkf" sceneMemberID="viewController">
+                <viewController id="TuG-Uk-lkf" customClass="STCDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Pco-hv-pyl"/>
                         <viewControllerLayoutGuide type="bottom" id="Yaf-hZ-PNZ"/>
@@ -15,9 +15,18 @@
                     <view key="view" contentMode="scaleToFill" id="yrJ-rl-qtI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HoQ-8s-ixZ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Khc-tI-pfb"/>
+                    <connections>
+                        <outlet property="scrollView" destination="HoQ-8s-ixZ" id="ggF-pA-VB6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fhr-gf-9ye" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
