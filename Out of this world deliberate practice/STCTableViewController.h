@@ -6,6 +6,7 @@
 #import "STCSpaceObject.h"
 #import "AstronomicalData.h"
 #import "STCDetailViewController.h"
+#import "STCSpaceDataViewController.h"
 
 
 @interface STCTableViewController : UITableViewController

@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "STCSpaceObject.h"
 
 @interface STCSpaceDataViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) STCSpaceObject *spaceObject;
 
 @end

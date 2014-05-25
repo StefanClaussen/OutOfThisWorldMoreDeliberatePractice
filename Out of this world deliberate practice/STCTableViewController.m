@@ -86,6 +86,13 @@
     return cell;
 }
 
+#pragma mark - Table View delegate methods
+
+-(void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:@"planetsToSpaceDataSegue" sender:indexPath];
+}
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -132,11 +139,22 @@
 {
     if ([sender isKindOfClass:[UITableViewCell class]])
     {
-        if ([segue.destinationViewController isKindOfClass:[STCDetailViewController class]]) {
+        if ([segue.destinationViewController isKindOfClass:[STCDetailViewController class]])
+        {
             STCDetailViewController *nextVC = segue.destinationViewController;
             NSIndexPath *path = [self.tableView indexPathForCell:sender];
             STCSpaceObject *selectedObject = self.planets[path.row];
             nextVC.spaceObject = selectedObject;
+        }
+    }
+    if ([sender isKindOfClass:[NSIndexPath class]])
+    {
+        if ([segue.destinationViewController isKindOfClass:[STCSpaceDataViewController class]])
+        {
+            STCSpaceDataViewController *nextSpaceDataVC = segue.destinationViewController;
+            NSIndexPath *path = sender;
+            STCSpaceObject *spaceDataSelectedObject = self.planets[path.row];
+            nextSpaceDataVC.spaceObject = spaceDataSelectedObject;
         }
     }
 }
