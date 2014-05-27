@@ -7,9 +7,10 @@
 #import "AstronomicalData.h"
 #import "STCDetailViewController.h"
 #import "STCSpaceDataViewController.h"
+#import "STCAddSpaceObjectViewController.h"
 
 
-@interface STCTableViewController : UITableViewController
+@interface STCTableViewController : UITableViewController <STCAddSpaceObjectViewContollerDelegate>
 
 @property (strong, nonatomic)NSMutableArray *planets;
 @property (strong, nonatomic)NSMutableArray *addedSpaceObjects;

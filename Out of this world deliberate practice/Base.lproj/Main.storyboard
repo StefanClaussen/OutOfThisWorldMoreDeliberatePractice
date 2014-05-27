@@ -224,7 +224,13 @@
                             <outlet property="delegate" destination="Mho-b5-YIL" id="7aj-XR-NOv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Planets" id="ZFG-s1-KlP"/>
+                    <navigationItem key="navigationItem" title="Planets" id="ZFG-s1-KlP">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="qsC-Dt-qNi">
+                            <connections>
+                                <segue destination="D98-ot-PC0" kind="modal" identifier="planetsToAddSpaceObjectsSegue" id="cnB-oj-rQZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="gQY-dS-trF" kind="push" identifier="planetsToSpaceDataSegue" id="3yW-ZO-64O"/>
                     </connections>

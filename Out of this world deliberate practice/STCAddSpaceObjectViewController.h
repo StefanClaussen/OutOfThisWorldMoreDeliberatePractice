@@ -8,7 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol STCAddSpaceObjectViewContollerDelegate <NSObject>
+
+@required
+
+- (void)addSpaceObject;
+- (void)didCancel;
+
+@end
+
 @interface STCAddSpaceObjectViewController : UIViewController
+
+@property (weak, nonatomic) id <STCAddSpaceObjectViewContollerDelegate>delegate;
 
 @property (strong, nonatomic) IBOutlet UITextField *nameTextField;
 @property (strong, nonatomic) IBOutlet UITextField *nicknameTextField;
@@ -19,7 +30,6 @@
 
 
 - (IBAction)cancelButtonPressed:(UIButton *)sender;
-
 - (IBAction)addButtonPressed:(UIButton *)sender;
 
 @end

@@ -35,7 +35,8 @@
         STCSpaceObject *spacePlanet = [[STCSpaceObject alloc]initWithData:data andImage:[UIImage imageNamed:imageName]];
         [self.planets addObject:spacePlanet];
     }
-    NSLog(@"%@", self.planets);
+    
+    STCAddSpaceObjectViewController
     
 }
 
@@ -166,6 +167,21 @@
     return YES;
 }
 */
+
+#pragma mark - STCAddSpaceObjectViewContollerDelegate methods
+
+- (void)didCancel
+{
+    NSLog(@"Cancel pressed");
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)addSpaceObject
+{
+    NSLog(@"Add pressed");
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 #pragma mark - Navigation
 
