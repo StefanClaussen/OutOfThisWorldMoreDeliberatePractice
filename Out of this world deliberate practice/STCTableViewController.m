@@ -58,14 +58,26 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Return the number of sections.
-    return 1;
+    if ([self.addedSpaceObjects count])
+    {
+        return 2;
+    }
+    else
+    {
+        return 1;
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-    return [self.planets count];
+    if (section == 1)
+    {
+        return [self.addedSpaceObjects count];
+    }
+    else
+    {
+        return [self.planets count];
+    }
 }
 
 
