@@ -10,12 +10,12 @@
 
 @interface STCAddSpaceObjectViewController : UIViewController
 
-@property (strong, nonatomic) IBOutlet UITextField *name;
-@property (strong, nonatomic) IBOutlet UITextField *nickname;
-@property (strong, nonatomic) IBOutlet UITextField *diameter;
-@property (strong, nonatomic) IBOutlet UITextField *temperature;
-@property (strong, nonatomic) IBOutlet UITextField *numberOfMoons;
-@property (strong, nonatomic) IBOutlet UITextField *interestingFact;
+@property (strong, nonatomic) IBOutlet UITextField *nameTextField;
+@property (strong, nonatomic) IBOutlet UITextField *nicknameTextField;
+@property (strong, nonatomic) IBOutlet UITextField *diameterTextField;
+@property (strong, nonatomic) IBOutlet UITextField *temperatureTextField;
+@property (strong, nonatomic) IBOutlet UITextField *numberOfMoonsTextField;
+@property (strong, nonatomic) IBOutlet UITextField *interestingFactTextField;
 
 
 - (IBAction)cancelButtonPressed:(UIButton *)sender;

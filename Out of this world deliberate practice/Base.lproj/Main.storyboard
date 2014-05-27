@@ -142,12 +142,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="diameter" destination="zvt-6b-gis" id="RA9-7m-bv4"/>
-                        <outlet property="interestingFact" destination="xei-FH-xKS" id="cKC-O4-ELB"/>
-                        <outlet property="name" destination="1Bw-m5-LMs" id="612-1Z-oNc"/>
-                        <outlet property="nickname" destination="eBG-p3-EVh" id="8A3-bC-4Te"/>
-                        <outlet property="numberOfMoons" destination="que-qU-2cb" id="ztW-R7-0JP"/>
-                        <outlet property="temperature" destination="7Ps-VA-0eW" id="YLo-de-HbA"/>
+                        <outlet property="diameterTextField" destination="zvt-6b-gis" id="3wB-6a-eKM"/>
+                        <outlet property="interestingFactTextField" destination="xei-FH-xKS" id="rqU-Ju-iZD"/>
+                        <outlet property="nameTextField" destination="1Bw-m5-LMs" id="0vs-lw-3PW"/>
+                        <outlet property="nicknameTextField" destination="eBG-p3-EVh" id="iup-sd-XJg"/>
+                        <outlet property="numberOfMoonsTextField" destination="que-qU-2cb" id="srX-F3-gyl"/>
+                        <outlet property="temperatureTextField" destination="7Ps-VA-0eW" id="T4f-f4-xcx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QFF-f7-gQu" userLabel="First Responder" sceneMemberID="firstResponder"/>
