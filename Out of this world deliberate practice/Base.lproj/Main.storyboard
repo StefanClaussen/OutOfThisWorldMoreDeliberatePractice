@@ -62,7 +62,97 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DGz-46-Wfa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1487" y="477"/>
+            <point key="canvasLocation" x="1495" y="737"/>
+        </scene>
+        <!--Add Space Object View Controller-->
+        <scene sceneID="rAs-1A-o2t">
+            <objects>
+                <viewController id="D98-ot-PC0" customClass="STCAddSpaceObjectViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="G2j-YE-UOC"/>
+                        <viewControllerLayoutGuide type="bottom" id="0BC-nC-Iik"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cPq-Dn-EsR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.59999999999999964" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Bw-m5-LMs">
+                                <rect key="frame" x="20" y="65" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.60000002384185791" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nickname" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eBG-p3-EVh">
+                                <rect key="frame" x="20" y="103" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.60000002384185791" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Diameter" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zvt-6b-gis">
+                                <rect key="frame" x="20" y="141" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.60000002384185791" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Temperature" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Ps-VA-0eW">
+                                <rect key="frame" x="20" y="179" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.60000002384185791" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number of moons" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="que-qU-2cb">
+                                <rect key="frame" x="20" y="217" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.60000002384185791" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Interesting fact" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xei-FH-xKS">
+                                <rect key="frame" x="20" y="255" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2f-80-hbu">
+                                <rect key="frame" x="57" y="341" width="78" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.1013442319" blue="0.051427627349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="D98-ot-PC0" eventType="touchUpInside" id="JiO-41-Gnt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rU8-vg-hZo">
+                                <rect key="frame" x="188" y="341" width="78" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.18063108420000001" green="1" blue="0.38319386319999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addButtonPressed:" destination="D98-ot-PC0" eventType="touchUpInside" id="89Q-ql-4wP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="diameter" destination="zvt-6b-gis" id="RA9-7m-bv4"/>
+                        <outlet property="interestingFact" destination="xei-FH-xKS" id="cKC-O4-ELB"/>
+                        <outlet property="name" destination="1Bw-m5-LMs" id="612-1Z-oNc"/>
+                        <outlet property="nickname" destination="eBG-p3-EVh" id="8A3-bC-4Te"/>
+                        <outlet property="numberOfMoons" destination="que-qU-2cb" id="ztW-R7-0JP"/>
+                        <outlet property="temperature" destination="7Ps-VA-0eW" id="YLo-de-HbA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QFF-f7-gQu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1495" y="-600"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="Lv8-D9-QWK">
@@ -90,7 +180,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fhr-gf-9ye" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1487" y="-270"/>
+            <point key="canvasLocation" x="1495" y="88"/>
         </scene>
         <!--Table View Controller - Planets-->
         <scene sceneID="Arj-uX-vfF">

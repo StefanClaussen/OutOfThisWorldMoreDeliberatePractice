@@ -48,6 +48,15 @@
     return _planets;
 }
 
+-(NSMutableArray *)addedSpaceObjects
+{
+    if (!_addedSpaceObjects)
+    {
+        _addedSpaceObjects = [[NSMutableArray alloc]init];
+    }
+    return _addedSpaceObjects;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -85,12 +94,26 @@
 {
     static NSString *cellIdentifier = @"cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
-    STCSpaceObject *planet = self.planets[indexPath.row];
-    cell.textLabel.text = planet.name;
+    
+    if (indexPath.section ==1)
+    {
+        //Use new space object to customise the cell
+        //This was my effort.
+//        STCSpaceObject *addedPlanet = self.addedSpaceObjects[indexPath.row];
+//        cell.textLabel.text = addedPlanet.name;
+//        cell.detailTextLabel.text = addedPlanet.nickname;
+//        cell.imageView.image = addedPlanet.spaceImage;
+    }
+    else
+    {
+        STCSpaceObject *planet = self.planets[indexPath.row];
+        cell.textLabel.text = planet.name;
+        cell.detailTextLabel.text = planet.nickname;
+        cell.imageView.image = planet.spaceImage;
+    }
+    
     cell.textLabel.textColor = [UIColor whiteColor];
-    cell.detailTextLabel.text = planet.nickname;
     cell.detailTextLabel.textColor = [UIColor colorWithWhite:0.5 alpha:1];
-    cell.imageView.image = planet.spaceImage;
     
     tableView.backgroundColor = [UIColor blackColor];
     cell.backgroundColor = [UIColor clearColor];
