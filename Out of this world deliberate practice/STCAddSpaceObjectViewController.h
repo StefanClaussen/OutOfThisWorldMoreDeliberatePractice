@@ -7,17 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "STCSpaceObject.h"
 
 @protocol STCAddSpaceObjectViewContollerDelegate <NSObject>
 
 @required
 
-- (void)addSpaceObject;
+- (void)addSpaceObject:(STCSpaceObject *)spaceObject;
 - (void)didCancel;
 
 @end
 
-@interface STCAddSpaceObjectViewController : UIViewController
+@interface STCAddSpaceObjectViewController : UIViewController <UITextFieldDelegate>
 
 @property (weak, nonatomic) id <STCAddSpaceObjectViewContollerDelegate>delegate;
 

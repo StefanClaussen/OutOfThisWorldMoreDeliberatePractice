@@ -8,6 +8,7 @@
 
 #import "STCAddSpaceObjectViewController.h"
 
+
 @interface STCAddSpaceObjectViewController ()
 
 @end
@@ -28,12 +29,33 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Orion.jpg"]];
+    self.nameTextField.delegate = self;
+    self.nicknameTextField.delegate = self;
+    self.diameterTextField.delegate = self;
+    self.temperatureTextField.delegate = self;
+    self.numberOfMoonsTextField.delegate = self;
+    self.interestingFactTextField.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - helper methods
+
+- (STCSpaceObject*)returnNewSpaceObject
+{
+    STCSpaceObject *newSpaceObject = [[STCSpaceObject alloc]init];
+    newSpaceObject.name = self.nameTextField.text;
+    newSpaceObject.nickname = self.nicknameTextField.text;
+    newSpaceObject.diameter = [self.diameterTextField.text floatValue];
+    newSpaceObject.temperature = [self.diameterTextField.text floatValue];
+    newSpaceObject.numberOfMoons = [self.numberOfMoonsTextField.text integerValue];
+    newSpaceObject.interestingFact = self.interestingFactTextField.text;
+    
+    return newSpaceObject;
 }
 
 /*
@@ -49,11 +71,25 @@
 
 - (IBAction)cancelButtonPressed:(UIButton *)sender
 {
-    
+    [self.delegate didCancel];
 }
 
 - (IBAction)addButtonPressed:(UIButton *)sender
 {
-    
+    [self.delegate addSpaceObject:[self returnNewSpaceObject]];
 }
+
+#pragma mark - UITextFieldDelegate methods
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [self.nameTextField resignFirstResponder];
+    [self.nicknameTextField resignFirstResponder];
+    [self.diameterTextField resignFirstResponder];
+    [self.temperatureTextField resignFirstResponder];
+    [self.numberOfMoonsTextField resignFirstResponder];
+    [self.interestingFactTextField resignFirstResponder];
+    return YES;
+}
+
 @end

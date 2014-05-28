@@ -36,8 +36,6 @@
         [self.planets addObject:spacePlanet];
     }
     
-    STCAddSpaceObjectViewController
-    
 }
 
 -(NSMutableArray *)planets
@@ -176,9 +174,10 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)addSpaceObject
+- (void)addSpaceObject:(STCSpaceObject *)spaceObject;
 {
     NSLog(@"Add pressed");
+    [self.addedSpaceObjects addObject:spaceObject];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -207,6 +206,11 @@
             STCSpaceObject *spaceDataSelectedObject = self.planets[path.row];
             nextSpaceDataVC.spaceObject = spaceDataSelectedObject;
         }
+    }
+    if ([segue.destinationViewController isKindOfClass:[STCAddSpaceObjectViewController class]])
+    {
+        STCAddSpaceObjectViewController *addSpaceObjectVC = segue.destinationViewController;
+        addSpaceObjectVC.delegate = self;
     }
 }
 
