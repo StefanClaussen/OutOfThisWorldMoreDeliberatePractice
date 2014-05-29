@@ -10,6 +10,24 @@
 
 @implementation STCTableViewController
 
+-(NSMutableArray *)planets
+{
+    if (!_planets)
+    {
+        _planets = [[NSMutableArray alloc]init];
+    }
+    return _planets;
+}
+
+-(NSMutableArray *)addedSpaceObjects
+{
+    if (!_addedSpaceObjects)
+    {
+        _addedSpaceObjects = [[NSMutableArray alloc]init];
+    }
+    return _addedSpaceObjects;
+}
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -40,24 +58,6 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [self.tableView reloadData];
-}
-
--(NSMutableArray *)planets
-{
-    if (!_planets)
-    {
-        _planets = [[NSMutableArray alloc]init];
-    }
-    return _planets;
-}
-
--(NSMutableArray *)addedSpaceObjects
-{
-    if (!_addedSpaceObjects)
-    {
-        _addedSpaceObjects = [[NSMutableArray alloc]init];
-    }
-    return _addedSpaceObjects;
 }
 
 - (void)didReceiveMemoryWarning
@@ -192,22 +192,38 @@
 {
     if ([sender isKindOfClass:[UITableViewCell class]])
     {
+        STCSpaceObject *selectedObject;
         if ([segue.destinationViewController isKindOfClass:[STCDetailViewController class]])
         {
             STCDetailViewController *nextVC = segue.destinationViewController;
             NSIndexPath *path = [self.tableView indexPathForCell:sender];
-            STCSpaceObject *selectedObject = self.planets[path.row];
+            if (path.section == 0)
+            {
+                selectedObject = self.planets[path.row];
+            }
+            else if (path.section == 1)
+            {
+                selectedObject = self.addedSpaceObjects[path.row];
+            }
             nextVC.spaceObject = selectedObject;
         }
     }
     if ([sender isKindOfClass:[NSIndexPath class]])
     {
+        STCSpaceObject *selectedObject;
         if ([segue.destinationViewController isKindOfClass:[STCSpaceDataViewController class]])
         {
             STCSpaceDataViewController *nextSpaceDataVC = segue.destinationViewController;
             NSIndexPath *path = sender;
-            STCSpaceObject *spaceDataSelectedObject = self.planets[path.row];
-            nextSpaceDataVC.spaceObject = spaceDataSelectedObject;
+            if (path.section == 0)
+            {
+                selectedObject = self.planets[path.row];
+            }
+            else if (path.section == 1)
+            {
+                selectedObject = self.addedSpaceObjects[path.row];
+            }
+            nextSpaceDataVC.spaceObject = selectedObject;
         }
     }
     if ([segue.destinationViewController isKindOfClass:[STCAddSpaceObjectViewController class]])
