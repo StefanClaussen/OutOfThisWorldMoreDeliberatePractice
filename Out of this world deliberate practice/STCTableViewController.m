@@ -35,7 +35,11 @@
         STCSpaceObject *spacePlanet = [[STCSpaceObject alloc]initWithData:data andImage:[UIImage imageNamed:imageName]];
         [self.planets addObject:spacePlanet];
     }
-    
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self.tableView reloadData];
 }
 
 -(NSMutableArray *)planets
@@ -97,11 +101,10 @@
     if (indexPath.section ==1)
     {
         //Use new space object to customise the cell
-        //This was my effort.
-//        STCSpaceObject *addedPlanet = self.addedSpaceObjects[indexPath.row];
-//        cell.textLabel.text = addedPlanet.name;
-//        cell.detailTextLabel.text = addedPlanet.nickname;
-//        cell.imageView.image = addedPlanet.spaceImage;
+        STCSpaceObject *addedPlanet = self.addedSpaceObjects[indexPath.row];
+        cell.textLabel.text = addedPlanet.name;
+        cell.detailTextLabel.text = addedPlanet.nickname;
+        cell.imageView.image = addedPlanet.spaceImage;
     }
     else
     {
