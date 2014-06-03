@@ -2,13 +2,13 @@
 //  STCTableViewController.m
 //  Out of this world deliberate practice
 
-#import "STCTableViewController.h"
+#import "STCOuterSpaceTableViewController.h"
 
-@interface STCTableViewController ()
+@interface STCOuterSpaceTableViewController ()
 
 @end
 
-@implementation STCTableViewController
+@implementation STCOuterSpaceTableViewController
 
 -(NSMutableArray *)planets
 {
@@ -193,9 +193,9 @@
     if ([sender isKindOfClass:[UITableViewCell class]])
     {
         STCSpaceObject *selectedObject;
-        if ([segue.destinationViewController isKindOfClass:[STCDetailViewController class]])
+        if ([segue.destinationViewController isKindOfClass:[STCSpaceImageViewController class]])
         {
-            STCDetailViewController *nextVC = segue.destinationViewController;
+            STCSpaceImageViewController *nextVC = segue.destinationViewController;
             NSIndexPath *path = [self.tableView indexPathForCell:sender];
             if (path.section == 0)
             {

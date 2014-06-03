@@ -22,7 +22,7 @@
 		F8462553192CA946001A44B4 /* Out_of_this_world_deliberate_practiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F8462552192CA946001A44B4 /* Out_of_this_world_deliberate_practiceTests.m */; };
 		F8462561192CAA5A001A44B4 /* AstronomicalData.m in Sources */ = {isa = PBXBuildFile; fileRef = F846255E192CAA5A001A44B4 /* AstronomicalData.m */; };
 		F8462566192CAAAF001A44B4 /* STCSpaceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F8462565192CAAAF001A44B4 /* STCSpaceObject.m */; };
-		F8462569192CAF9B001A44B4 /* STCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8462568192CAF9B001A44B4 /* STCTableViewController.m */; };
+		F8462569192CAF9B001A44B4 /* STCOuterSpaceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8462568192CAF9B001A44B4 /* STCOuterSpaceTableViewController.m */; };
 		F8462575192CB2B3001A44B4 /* Earth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F846256B192CB2B3001A44B4 /* Earth.jpg */; };
 		F8462576192CB2B3001A44B4 /* EinsteinRing.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F846256C192CB2B3001A44B4 /* EinsteinRing.jpg */; };
 		F8462577192CB2B3001A44B4 /* Jupiter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F846256D192CB2B3001A44B4 /* Jupiter.jpg */; };
@@ -33,7 +33,7 @@
 		F846257C192CB2B3001A44B4 /* Saturn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F8462572192CB2B3001A44B4 /* Saturn.jpg */; };
 		F846257D192CB2B3001A44B4 /* Uranus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F8462573192CB2B3001A44B4 /* Uranus.jpg */; };
 		F846257E192CB2B3001A44B4 /* Venus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F8462574192CB2B3001A44B4 /* Venus.jpg */; };
-		F84625CC192CD27E001A44B4 /* STCDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F84625CB192CD27E001A44B4 /* STCDetailViewController.m */; };
+		F84625CC192CD27E001A44B4 /* STCSpaceImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F84625CB192CD27E001A44B4 /* STCSpaceImageViewController.m */; };
 		F8462656192DFF14001A44B4 /* STCSpaceDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8462655192DFF14001A44B4 /* STCSpaceDataViewController.m */; };
 		F85EFC0F1934903500B88693 /* STCAddSpaceObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F85EFC0E1934903500B88693 /* STCAddSpaceObjectViewController.m */; };
 /* End PBXBuildFile section */
@@ -70,8 +70,8 @@
 		F846255E192CAA5A001A44B4 /* AstronomicalData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AstronomicalData.m; sourceTree = "<group>"; };
 		F8462564192CAAAF001A44B4 /* STCSpaceObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STCSpaceObject.h; sourceTree = "<group>"; };
 		F8462565192CAAAF001A44B4 /* STCSpaceObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STCSpaceObject.m; sourceTree = "<group>"; };
-		F8462567192CAF9B001A44B4 /* STCTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STCTableViewController.h; sourceTree = "<group>"; };
-		F8462568192CAF9B001A44B4 /* STCTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STCTableViewController.m; sourceTree = "<group>"; };
+		F8462567192CAF9B001A44B4 /* STCOuterSpaceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STCOuterSpaceTableViewController.h; sourceTree = "<group>"; };
+		F8462568192CAF9B001A44B4 /* STCOuterSpaceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STCOuterSpaceTableViewController.m; sourceTree = "<group>"; };
 		F846256B192CB2B3001A44B4 /* Earth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Earth.jpg; sourceTree = "<group>"; };
 		F846256C192CB2B3001A44B4 /* EinsteinRing.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = EinsteinRing.jpg; sourceTree = "<group>"; };
 		F846256D192CB2B3001A44B4 /* Jupiter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Jupiter.jpg; sourceTree = "<group>"; };
@@ -82,8 +82,8 @@
 		F8462572192CB2B3001A44B4 /* Saturn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Saturn.jpg; sourceTree = "<group>"; };
 		F8462573192CB2B3001A44B4 /* Uranus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Uranus.jpg; sourceTree = "<group>"; };
 		F8462574192CB2B3001A44B4 /* Venus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Venus.jpg; sourceTree = "<group>"; };
-		F84625CA192CD27E001A44B4 /* STCDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STCDetailViewController.h; sourceTree = "<group>"; };
-		F84625CB192CD27E001A44B4 /* STCDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STCDetailViewController.m; sourceTree = "<group>"; };
+		F84625CA192CD27E001A44B4 /* STCSpaceImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STCSpaceImageViewController.h; sourceTree = "<group>"; };
+		F84625CB192CD27E001A44B4 /* STCSpaceImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STCSpaceImageViewController.m; sourceTree = "<group>"; };
 		F8462654192DFF14001A44B4 /* STCSpaceDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STCSpaceDataViewController.h; sourceTree = "<group>"; };
 		F8462655192DFF14001A44B4 /* STCSpaceDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STCSpaceDataViewController.m; sourceTree = "<group>"; };
 		F85EFC0D1934903500B88693 /* STCAddSpaceObjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STCAddSpaceObjectViewController.h; sourceTree = "<group>"; };
@@ -150,10 +150,10 @@
 				F8462536192CA945001A44B4 /* STCAppDelegate.h */,
 				F8462537192CA945001A44B4 /* STCAppDelegate.m */,
 				F8462539192CA945001A44B4 /* Main.storyboard */,
-				F8462567192CAF9B001A44B4 /* STCTableViewController.h */,
-				F8462568192CAF9B001A44B4 /* STCTableViewController.m */,
-				F84625CA192CD27E001A44B4 /* STCDetailViewController.h */,
-				F84625CB192CD27E001A44B4 /* STCDetailViewController.m */,
+				F8462567192CAF9B001A44B4 /* STCOuterSpaceTableViewController.h */,
+				F8462568192CAF9B001A44B4 /* STCOuterSpaceTableViewController.m */,
+				F84625CA192CD27E001A44B4 /* STCSpaceImageViewController.h */,
+				F84625CB192CD27E001A44B4 /* STCSpaceImageViewController.m */,
 				F8462654192DFF14001A44B4 /* STCSpaceDataViewController.h */,
 				F8462655192DFF14001A44B4 /* STCSpaceDataViewController.m */,
 				F85EFC0D1934903500B88693 /* STCAddSpaceObjectViewController.h */,
@@ -344,8 +344,8 @@
 				F8462656192DFF14001A44B4 /* STCSpaceDataViewController.m in Sources */,
 				F85EFC0F1934903500B88693 /* STCAddSpaceObjectViewController.m in Sources */,
 				F8462538192CA945001A44B4 /* STCAppDelegate.m in Sources */,
-				F8462569192CAF9B001A44B4 /* STCTableViewController.m in Sources */,
-				F84625CC192CD27E001A44B4 /* STCDetailViewController.m in Sources */,
+				F8462569192CAF9B001A44B4 /* STCOuterSpaceTableViewController.m in Sources */,
+				F84625CC192CD27E001A44B4 /* STCSpaceImageViewController.m in Sources */,
 				F8462561192CAA5A001A44B4 /* AstronomicalData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

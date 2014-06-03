@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 One foot after the other. All rights reserved.
 //
 
-#import "STCDetailViewController.h"
+#import "STCSpaceImageViewController.h"
 
-@interface STCDetailViewController ()
+@interface STCSpaceImageViewController ()
 
 @end
 
-@implementation STCDetailViewController
+@implementation STCSpaceImageViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
